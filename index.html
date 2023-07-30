@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+     <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dev server</title>
+  </head>
+  <body >
+    <div id = "preloader"></div>
+   <header class="header container">
+    <nav>
+      <ul class="header__menu">
+        <li ><a class="header__link" href="#about"> About</a>
+        </li>
+        <li>
+          <a class="header__link" href="#project">Project</a>
+        </li>
+        <li >
+          <a class="header__link" href="#Education">Education</a>
+        </li>
+        <li>
+          <a class="header__link" href="#works">Works</a>
+        </li>
+        <li>
+          <a class="header__link" href="#contact">Contact</a>
+        </li>
+        <li class="header__line"></li>
+        <li>
+          <button id = "theme-toggle" class="header__sun">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+            </svg>
+            
+        </button>
+      </li>
+      <li>
+        <a class = "headere__resume btn " href="/resume.pdf" download="CV">Resume</a>
+      </li>
+      </ul>
+      <button aria-label="mobile nav button" class="header__bars">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </nav>
+   </header>
+   <!--mobile nav-->
+   <div class="mobile-nav">
+    <nav>
+      <ul class="mobile-nav__menu">
+        <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+        </li>
+        <li>
+            <a class="mobile-nav__link" href="#project">Projects</a> 
+        </li>
+        <li>
+           <a class="mobile-nav__link" href="#work">Work</a>
+        </li>
+        <li><a class="mobile-nav__link" href="#education">Education</a>
+            
+        </li>
+        <li>
+            <a class="mobile-nav__link" href="#contact">Contact</a>
+        </li>
+        <li class="mobile-nav__link-line"></li>
+        <li>
+          <button id = "theme-toggle" class="mobile-nav__sun">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" fill="currentColor" >
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+            </svg>
+        </button>
+        </li>
+        <li>
+          <a class="mobile-nav__btn btn" href="#">Resume</a>
+        </li>
+      </ul>
+    </nav>
+   </div>
+   <!--mobile nav complet-->
+   <main>
+    <section class="hero container">
+     <img class="hero__img" src="/mine.jpg" alt="profile pic">
+     <h2 class="hero__subtitle">Hi this is Darwin S</h2>
+     <h1 class="hero__title">FULLSTACK WEB APP DEVELOPER</h1>
+     <p class="hero__description">
+      Being an enthusiastic Engineer,I need to learn and explore so many things.
+      I can help you in<strong>building a web app </strong> from top to bottom and in<strong> building in 
+      some electronic projects.</strong> 
+     </p>
+     <a class="hero__btn btn"  href="mailto:sakthiveldarwin@gmail.com" >Reach out</a>
+     </section>
+    <section id = "about" class="about container section">
+    <div class = "about__content">
+      <h2 class="about__title">
+          About
+      </h2>
+      <p class="about__desc"> Hello this is <strong> Darwin, a fullstack web app developer </strong> who
+        had done many fullstack e-commerce peojects and looking towards 
+        to create a better projects for my clients.
+      </p>
+      <p class="about__desc">
+        I am learning new things and upgrading myself by everyday.
+        Interested in surfing through the internet to explore the newer things.
+      </p>
+      <p class="about__desc">
+        Awaiting to build a masrterpiece with you,If you are willing 
+        just reach out me with contact links.To reach me faster either mail
+         me or text me with 
+        telegram.
+      </p>
+      <hr class="about__hr">
+      <h3 class="about__subtitle"> Skills</h3>
+      <div class="about__ul-container">
+        <ul class="about__ul">
+          <li class="about__list"> Java</li>
+          <li class="about__list">C</li>
+          <li class="about__list">C++</li>
+          <li class="about__list">MySql</li>
+          <li class="about__list">HTML</li>
+          <li class="about__list">CSS</li>
+          <li class="about__list">JS</li>
+         
+        </ul>
+        <ul class="about__ul">
+          <li class="about__list">TS</li>
+          <li class="about__list">Angular</li>
+          <li class="about__list">SpringBoot</li>
+          <li class="about__list">Spring Data JPA</li>
+          <li class="about__list">IDE Vscode & Eclipse</li>
+          <li class="about__list">PCB Assembly cum IOT</li>
+        </ul>
+      </div>
+     
+    </div>
+    <div class="about_-img-wrapper">
+      <img 
+       class="about__img lazy loading" 
+       src="https://via.placeholder.com/208x295"
+       data-src="/tr.png"
+        alt="profile pic">
+    </div>
+    </section>
+    <section id = "project" class="project container section">
+      <h3 class="project__subtitle"> Project</h3>
+      
+      <div class="project__wrapper">
+        <h2 class="project__title">Ecommerce</h2>
+        <a class="project__link" 
+        href = "https://github.com/DARWIN-coder-G7/foodie">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+          fill="currentColor" >
+            <path fill-rule="evenodd" d="M19.902 4.098a3.75 3.75 0 00-5.304 0l-4.5 4.5a3.75 3.75 0 001.035 6.037.75.75 0 01-.646 1.353 5.25 5.25 0 01-1.449-8.45l4.5-4.5a5.25 5.25 0 117.424 7.424l-1.757 1.757a.75.75 0 11-1.06-1.06l1.757-1.757a3.75 3.75 0 000-5.304zm-7.389 4.267a.75.75 0 011-.353 5.25 5.25 0 011.449 8.45l-4.5 4.5a5.25 5.25 0 11-7.424-7.424l1.757-1.757a.75.75 0 111.06 1.06l-1.757 1.757a3.75 3.75 0 105.304 5.304l4.5-4.5a3.75 3.75 0 00-1.035-6.037.75.75 0 01-.354-1z" clip-rule="evenodd" />
+          </svg>
+          
+        </a>
+      </div>
+      <p class="project__desc">
+        A FullStack web application like swiggy and zomato.
+        A User can login and maintain his order details,
+        can order food or even add to cart and check out later 
+        is also available.This is one of my best fullstack
+        project.
+      </p>
+      <div class="project__info-container">
+        <div>
+          <h3 class="project__label">Tech Stack</h3>
+          <ul class="project__tech-stack">
+            <li class="project__info"> Css</li>
+            <li class="project__info">Html</li>
+            <li class="project__info">Java</li>
+            <li class="project__info">Bootstrap</li>
+            <li class="project__info">Material ui</li>
+            <li class="project__info">SpringData JPA</li>
+            <li class="project__info">SpringBoot</li>
+            <li class="project__info"> Angular</li>
+            <li class="project__info"> MySql</li>
+          </ul>
+        </div>
+        <div >
+          <h3 class="project__label">Proj Type</h3>
+          <p class="project__info"> Fullstack</p>
+        </div>
+        <div>
+          <h3 class="project__label">Timeline</h3>
+          <p class="project__info"> Mar22</p>
+        </div>
+      </div>
+      <div class="project__img-container">
+        <div class="project__img-wrapper">
+          <img 
+          class="lazy loading"
+          src="https://via.placeholder.com/1024x768"
+          data-src="/foodie0.png" alt="">
+        </div>
+        <div class="project__img-wrapper">
+          <img 
+          class="lazy loading"
+          src="https://via.placeholder.com/1366x768"
+          data-src="/foodie1.png" alt="">
+        </div>
+        <div class="project__img-wrapper">
+          <img 
+          class="lazy loading"
+          src="https://via.placeholder.com/1366x768"
+          data-src="/foodie2.png" alt="">
+        </div>
+        <div class="project__img-wrapper">
+          <img 
+          class="lazy loading"
+          src="https://via.placeholder.com/1366x768"
+          data-src="/foodie3.png" alt="">
+        </div>     
+        <div class="project__img-wrapper">
+          <img 
+          class="lazy loading"
+          src="https://via.placeholder.com/1366x768"
+          data-src="/foodie4.png" alt="">
+        </div>
+        <div class="project__img-wrapper">
+          <img 
+          class="lazy loading"
+          src="https://via.placeholder.com/1366x768"
+          data-src="/foodie5.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section id = "works" class="proj container section">
+      <h2 class="proj__title">Projects</h2>
+      <p class="proj__desc">
+        Here I listed some of my projects,these
+        are the projects I developed in order to test 
+        my knowledge in the relative fields.The projects
+        listed have their related github links or pdf with
+        tem.Kindly click the check out button to know more 
+        about these projects.
+      </p>
+      <div class="proj__container">
+          <!--project no 01-->
+      <h3 class="proj__pro-title">MOVIESDA</h3>
+      <div class="proj__img-wrapper proj__image1">
+        <img 
+        class="lazy loading"
+        src="https://via.placeholder.com/1366x768"
+        data-src="/moviesda1.png" alt="">
+      </div>
+      <div class="proj__pro proj__content1">
+              <h3 class="proj__pro-subtitle"> MOVIESDA</h3>
+      <p class="proj__pro-desc1">
+        This is a fullstack <strong>movie ticket booking</strong>
+        web app developed by me for booking tickets through online.
+        This app has both admin end and user end.
+      </p>
+      <p class="proj__pro-desc2">
+        Technologies used in these project are BackEnd => Java,
+        SpringBoot,SpringDataJpa,MySql FrontEnd => HTML,Css,Angular,
+        Bootstrap
+      </p>
+      <a class="btn proj__pro-btn" href="https://github.com/DARWIN-coder-G7/capstonefinal">Check out</a>
+      </div>
+      <!--project2-->
+       <h3 class="proj__pro-title"> SHOPPY</h3>
+       <div class="proj__img-wrapper proj__image2">
+        <img 
+        class="lazy loading"
+        src="https://via.placeholder.com/1366x768"
+        data-src="/shoppy1.png" alt="">
+       </div>
+       <div class="proj__pro proj__content2">
+        <h3 class="proj__pro-subtitle"> SHOPPY</h3>
+       <p class="proj__pro-desc1"> 
+         This is a full frontend alone <strong>food ordering</strong>
+        web app developed by me for ordering foods through online.
+        This app has both admin end and user end.
+       </p>
+       <p class="proj__pro-desc2">
+         Technologies used in this project are
+         FrontEnd => Html,Css,Angular,Bootstrap
+         and I used Json server API for dummy BackEnd
+         data.
+       </p>
+
+       <a class="btn proj__pro-btn" href=" https://github.com/DARWIN-coder-G7/phase004frontendstack">Check out</a>
+       </div>
+        <!--project no 03-->
+      <h3 class="proj__pro-title">ICIN</h3>
+      <div class="proj__img-wrapper proj__image3">
+        <img 
+        class="lazy loading"
+        src="https://via.placeholder.com/1366x768"
+        data-src="/icin.png" alt="">
+      </div>
+      <div class="proj__pro proj__content3">
+              <h3 class="proj__pro-subtitle"> ICIN</h3>
+      <p class="proj__pro-desc1"> 
+         This is a fullstack <strong>online banking</strong>
+        web app developed by me for creating accounts and making transactions
+         through online.
+        This app has both admin end and user end.
+      </p>
+      <p class="proj__pro-desc2">
+        Technologies used in these project are 
+        BackEnd => Java,SpringBoot,SpringDataJpa,MySql
+         FrontEnd => HTML,Css,Angular,Bootstrap,Material UI
+      </p>
+      <a class="btn proj__pro-btn" href="https://github.com/DARWIN-coder-G7/bankback">Check out</a>
+      </div>
+       <!--project no 04-->
+       <h3 class="proj__pro-title">SHOPPING</h3>
+       <div class="proj__img-wrapper proj__image4">
+        <img 
+        class="lazy loading"
+        src="https://via.placeholder.com/1366x768"
+        data-src="/shopping.png" alt="">
+       </div>
+       <div class="proj__pro proj__content4">
+               <h3 class="proj__pro-subtitle"> SHOPPING</h3>
+       <p class="proj__pro-desc1">
+          This is a website developed by me for ordering 
+          grocery items through online.This website is fully
+          developed on front end alone.
+       </p>
+       <p class="proj__pro-desc2">
+          Technologies used in this website are
+          Html,Css,Js.No frameworks used in this project.
+          Website developed alone with plain vanilla Js.
+       </p>
+       <a class="btn proj__pro-btn" href="https://github.com/DARWIN-coder-G7/works/tree/main/shopping">Check out</a>
+       </div>
+         <!--project no 05-->
+      <h3 class="proj__pro-title">SPORTY</h3>
+      <div class="proj__img-wrapper proj__image5">
+        <img src="/sporty.png" alt="">
+      </div>
+      <div class="proj__pro proj__content5">
+              <h3 class="proj__pro-subtitle"> SPORTY</h3>
+      <p class="proj__pro-desc1"> 
+        This is a backend admin Oriented web app developed
+        foe the purpose of maintaining stocks in online
+        with a web app.
+      </p>
+      <p class="proj__pro-desc2">
+         Technologies used in these projects are
+         BackEnd => Java,SPringBoot,SpringDataJPA,MySql
+         FrontEnd => Html,Thymeleaf
+      </p>
+      <a class="btn proj__pro-btn" href="https://github.com/DARWIN-coder-G7/phase-003/tree/main/sporty">Check out</a>
+      </div>
+       <!--project no 06-->
+       <h3 class="proj__pro-title">FLYAWAY</h3>
+       <div class="proj__img-wrapper proj__image6">
+         <img src="/flyaway.png" alt="">
+       </div>
+       <div class="proj__pro proj__content6">
+               <h3 class="proj__pro-subtitle"> FLYAWAY</h3>
+       <p class="proj__pro-desc1">
+          This website is developed for the purpose 
+          of <strong>Booking flight tickets Online </strong>
+          through this portal.This website has both admin 
+          end and user end.
+       </p>
+       <p class="proj__pro-desc2">
+         Technologies used in these projects are 
+         FrontEnd => Html,JSP  
+         BackEnd  => Servlet API, Java,MySql,JDBC template.
+       </p>
+       <a class="btn proj__pro-btn" href="https://github.com/DARWIN-coder-G7/phase002flyawaylms">Check out</a>
+       </div>
+
+       <!--project no 07-->
+       <h3 class="proj__pro-title">WRITTING PEN</h3>
+       <div class="proj__img-wrapper proj__image7">
+         <img src="/flyaway.png" alt="">
+       </div>
+       <div class="proj__pro proj__content7">
+               <h3 class="proj__pro-subtitle">WRITTING PEN</h3>
+       <p class="proj__pro-desc1">
+          This is a pen which can write by accessing our voice.
+          A speak to written format with our pen in a paper.
+          Developed as a initiative to use in exams and some other 
+          things.
+       </p>
+       <p class="proj__pro-desc2">
+        Hardware => CNC design,Old Hardrives,DVD Players,Ardiuno
+        Software => Ardiuno Programming
+       </p>
+       <a class="btn proj__pro-btn" href="/project_writting_pen.pdf" download="NEW-gen-PEn">Check out</a>
+       </div>
+
+      </div>
+    </section>
+    <section id = "Education" class="education container section">
+      <h2 class="ed__title">Education
+        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+           <lord-icon
+             src="https://cdn.lordicon.com/ggqtvqxi.json"
+            trigger="hover"
+             colors="primary:#4be1ec,secondary:#cb5eee"
+             style="width:75px;height:75px">
+          </lord-icon>
+      </h2>
+      <h3 class="ed__subtitle">Graduation 
+        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/hursldrn.json"
+            trigger="morph"
+            colors="primary:#4be1ec,secondary:#cb5eee"
+            style="width:55px;height:55px">
+        </lord-icon>
+      </h3>
+      <p class="ed__desc">
+        Completed B.E ECE from Anna university with 6.83 CGPA by 2019.
+      </p>
+      <hr class="ed__hr">
+      <h3 class="ed__subtitle">School
+        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/opsvjsyd.json"
+            trigger="hover"
+            colors="primary:#4be1ec,secondary:#cb5eee"
+            style="width:55px;height:55px">
+        </lord-icon>
+
+      </h3>
+      <p class="ed__desc">
+        Completed H.S.L.C from State board with 78.75% by 2015.
+      </p>
+      <hr class="ed__hr">
+      <h3 class="ed__subtitle">Courses
+        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/ivhjpjsw.json"
+            trigger="hover"
+            colors="primary:#4be1ec,secondary:#cb5eee"
+            style="width:55px;height:55px">
+        </lord-icon>
+
+      </h3>
+      <p class="ed__desc">
+        Completed FullStack Java WebApp Developer from Simplilearn by 2023.
+      </p>
+    </section>
+    
+    <section id = "contact" class="contact container section">
+          <h2 class="contact__title"> Contact me
+            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/sdhhsgeg.json"
+                trigger="hover"
+                colors="primary:#4be1ec,secondary:#cb5eee"
+                style="width:75px;height:75px">
+            </lord-icon>
+
+          </h2>
+          <p class="contact__desc">
+            Hi, This is <strong>Darwin s</strong> I think you 
+            have gone through my data in above website.So,If you want
+            me to work with you kindly feel free to contact me with 
+            the links given below.I am Awaitingfor your mail.
+          </p>
+          <a class="contact__btn btn" 
+          href="mailto:sakthiveldarwin@gmail.com"
+          target="_blank" >
+             Reach Out</a>
+              
+             <ul class="social-icons">
+              <li><a href="mailto:sakthiveldarwin@gmail.com"
+                target ="_blank">
+                <i class="fa fa-envelope"></i></a></li>
+              <li><a href="https://t.me/DarwinEce"><i class="fa fa-telegram"></i></a></li>
+              <li><a href="tel:+918754825729"><i class="fa fa-phone"></i></a></li>
+              <li><a href="https://wa.me/8754825729"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+             
+    </section>
+    
+   </main>
+   <footer class="footer container section">
+    <h3 class="footer__title">Darwin s</h3>
+   </footer>
+    <script type="module" src="./src/main.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load",function(){
+        loader.style.display = "none";
+      })
+    </script>
+  </body>
+</html>
