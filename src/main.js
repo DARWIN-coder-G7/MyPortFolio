@@ -19,3 +19,5 @@ import lazyLoading from './utils/lazy-loading';
 mobilenav();
 darkmode();
 lazyLoading();
+
+

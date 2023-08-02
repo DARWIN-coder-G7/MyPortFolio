@@ -67,8 +67,8 @@
     transform: scale(2.2);
     -ms-transform: scale(2.2);
     -webkit-transform: scale(2.2);
-    color: #ff003c;
-    background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+    color: var(--clr-ro);
+    background: -webkit-linear-gradient(45deg, var(--clr-ro), var(--clr-rose));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 265ms ease-in;
