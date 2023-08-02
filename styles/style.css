@@ -5,6 +5,7 @@
     --clr-slate600:#475569;
     --clr-slate800:#1e293b;
     --clr-rose:#12f7ff;
+    --clr-ro:#1A4EDE;
     --clr-indigo:#4f46e5;
     --clr-r1: rgba(18,247,255,0.5);
     --clr-r2: rgba(18,247,255,0.22);
@@ -42,6 +43,7 @@ html{
     --clr-slate600:#1e293b;
     --clr-slate800:#1e293b;
     --clr-rose:#e11d48;
+    --clr-ro:#ff003c;
     --clr-r1: rgba(225,29,72,0.5);
     --clr-r2: rgba(225,29,72,0.22);
     --clr-r3: rgba(225,29,72,0.25);

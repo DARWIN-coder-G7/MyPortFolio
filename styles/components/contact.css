@@ -54,7 +54,7 @@
     height: 45px;
     border-radius: 100%;
     display: block;
-    background: linear-gradient(45deg, #ff003c, #c648c8);
+    background: linear-gradient(45deg, var(--clr-ro), var(--clr-rose));
     transition: all 265ms ease-out;
   }
   
